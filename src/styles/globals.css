@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+@font-face {
+  font-family: "Local";
+  src: url("/assets/font/Superpix-DONATIONWARE.otf") format("opentype");
+  /* Update the file name and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Demon";
+  src: url("/assets/font/PixemontrialRegular-x3KqK.otf") format("opentype");
+  /* Update the file name and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Angel";
+  src: url("/assets/font/UpheavalPro.otf") format("opentype");
+  /* Update the file name and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Egg";
+  src: url("/assets/font/Pixel Digivolve.otf") format("opentype");
+  /* Update the file name and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: transparent;
+}
+* > * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: transparent;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Silkscreen", sans-serif;
+  @apply bg-primary text-white;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.logo {
+  font-family: "Local", sans-serif;
+}
+.demon-logo {
+  font-family: "Demon", sans-serif;
+}
+.angel-logo {
+  font-family: "Angel", sans-serif;
+}
+.egg-logo {
+  font-family: "Egg", sans-serif;
+}
+
+nav li {
+  @apply py-0.5 px-2;
+}
+nav li a {
+  @apply hover:scale-105 duration-300 inline-block;
+}
+
+input {
+  /* border-radius: 4px; */
+  /* border: 1px solid #fff; */
+  background: white;
+  /* background: rgba(255, 255, 255, 0.03); */
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  @apply h-12 w-full  px-3 text-base text-black outline-none focus:border focus:outline-none focus:shadow-md rounded-md duration-300   mb-1;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+/* md:w-4/5 lg:w-4/5 */
+.image-gallery {
+  display: grid;
+  /* padding: 0% 15%; */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  justify-content: space-between;
+  /* @apply px-[10%] md:px-[10%] lg:px-[5%] ; */
+  @apply px-4;
+}
+.cards {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-60 md:max-w-36;
+}
+
+.devcards {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-52 md:max-w-36;
+}
+.demoncards {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-52 md:max-w-36;
+}
+.angelcards {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-52 md:max-w-36;
+}
+.eggcards {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-52 md:max-w-36;
+}
+
+.egg-bg {
+  @apply bg-amber-950;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+select {
+  @apply h-10 border rounded-md px-1 mb-3 w-full;
+}
+
+.btn {
+  @apply rounded-md h-10 bg-white  font-bold px-4 py-2 hover:scale-105 active:scale-100 duration-200;
+}
