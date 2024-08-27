@@ -187,7 +187,7 @@ export default function Home() {
     <Layout title="Lilpads">
       <main className="pb-20 lilpads-body">
         <div className="container mx-auto px-4">
-          <h1 className="custom-font text-lilpadsPrimary text-7xl md:text-8xl text-center mt-5 md:mt-10 text-shadow">
+          <h1 className="custom-font text-lilpadsPrimary text-7xl md:text-8xl text-center pt-5 md:pt-10 text-shadow">
             Lilpads
           </h1>
         </div>
