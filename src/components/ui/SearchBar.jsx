@@ -40,9 +40,9 @@ export default function SearchBar() {
       </div>
       <button
         onClick={handleToggleSort}
-        className="p-2 bg-white text-gray-500 rounded hover:scale-[0.95] duration-150 active:scale-[1.03]"
+        className="p-2 shadow-md bg-white text-gray-500 rounded hover:scale-[0.95] duration-150 active:scale-[1.03]"
       >
-        <FaSort size={28} />
+        <FaSort size={28} className="" />
       </button>
     </div>
   );
