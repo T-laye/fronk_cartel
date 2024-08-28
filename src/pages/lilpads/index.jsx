@@ -64,22 +64,61 @@ export default function Home() {
   const sort = useSearchStore((state) => state.sortByRarity);
   const data = useFetchDataStore((state) => state.data);
   const sortedData = useFetchDataStore((state) => state.sortedData);
-  
   const fetchData = useFetchDataStore((state) => state.fetchData);
   const fetchSortedData = useFetchDataStore((state) => state.fetchSortedData);
   const fetchUpdatedData = useFetchDataStore((state) => state.fetchUpdatedData);
+  const setTraits = useFetchDataStore((state) => state.setTraits);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [sortedData, setSortedData] = useState([]);
+  const base = useSearchStore((state) => state.base);
+  const pad1 = useSearchStore((state) => state.pad1);
+  const pad2 = useSearchStore((state) => state.pad2);
+  const pad3 = useSearchStore((state) => state.pad3);
+  const water1 = useSearchStore((state) => state.water1);
+  const water2 = useSearchStore((state) => state.water2);
+  const air = useSearchStore((state) => state.air);
   const itemsPerPage = 100;
   const scrollContainerRef = useRef(null);
+
+  //   console.log(base);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const getTraits = () => {
+    const attributeMap = {};
+
+    // Iterate through each item in the data
+    data.forEach((item) => {
+      const attributes = item.attributes;
+
+      // Iterate through each attribute of the item
+      for (const [key, value] of Object.entries(attributes)) {
+        if (!attributeMap[key]) {
+          // If the attribute is not yet in the map, initialize it with an empty set
+          attributeMap[key] = new Set();
+        }
+        // Add the attribute value to the set to ensure uniqueness
+        attributeMap[key].add(value);
+      }
+    });
+
+    // Convert the attribute map to the desired format
+    const attributesArray = Object.entries(attributeMap).map(
+      ([key, valueSet]) => ({
+        name: key,
+        traits: Array.from(valueSet), // Convert the set back to an array
+      })
+    );
+
+    setTraits(attributesArray);
+  };
 
   useEffect(() => {
     fetchData();
     fetchSortedData();
     fetchUpdatedData();
-  }, [fetchData, fetchSortedData, sort, fetchUpdatedData]);
+    getTraits();
+  }, [fetchData, fetchSortedData, sort, fetchUpdatedData, getTraits]);
 
-//   console.log(updatedData);
+  //   console.log(updatedData);
 
   // useEffect(() => {
   //   const traitCount = calculateTraitFrequency(data);
@@ -131,13 +170,38 @@ export default function Home() {
     window.scrollTo({ top: 0 });
   }, [currentPage]);
 
+  const defaultValue = "Select a value";
   const actualData = !sort ? sortedData : data;
 
-  const filteredData = searchTerm
-    ? actualData.filter((d) =>
-        d.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : actualData;
+  const filteredData = actualData?.filter((d) => {
+    // Check if the name includes the search term or if searchTerm is empty
+    const nameMatch =
+      searchTerm === "" ||
+      d.name.toLowerCase().includes(`#${searchTerm.toLowerCase()}`);
+
+    // Check if each attribute matches the filter or is set to the default value
+    const baseMatch = base === defaultValue || d.attributes.Base === base;
+    const pad1Match = pad1 === defaultValue || d.attributes["Pad 1"] === pad1;
+    const pad2Match = pad2 === defaultValue || d.attributes["Pad 2"] === pad2;
+    const pad3Match = pad3 === defaultValue || d.attributes["Pad 3"] === pad3;
+    const water1Match =
+      water1 === defaultValue || d.attributes["Water 1"] === water1;
+    const water2Match =
+      water2 === defaultValue || d.attributes["Water 2"] === water2;
+    const airMatch = air === defaultValue || d.attributes.Air === air;
+
+    // Return true if all conditions are met
+    return (
+      nameMatch &&
+      baseMatch &&
+      pad1Match &&
+      pad2Match &&
+      pad3Match &&
+      water1Match &&
+      water2Match &&
+      airMatch
+    );
+  });
 
   const renderData = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -222,7 +286,9 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <div className="text-center text-2xl">No Results Found</div>
+            <div className="text-center text-2xl text-black">
+              No Results Found
+            </div>
           )}
         </div>
       </main>

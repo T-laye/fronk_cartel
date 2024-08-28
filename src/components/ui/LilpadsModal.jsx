@@ -22,7 +22,7 @@ export default function Modal({ info, img }) {
 
   const getInscriptionId = updatedData.find((d) => d.name === info.name);
 
-  console.log(getInscriptionId);
+  // console.log(getInscriptionId);
 
   const handleCopyClick = () => {
     navigator.clipboard.writeText(getInscriptionId.inscriptionId);
