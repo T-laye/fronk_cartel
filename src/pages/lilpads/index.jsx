@@ -149,7 +149,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    // fetchData();
+    fetchData();
     // fetchSortedData();
     // fetchUpdatedData();
   }, [
@@ -167,6 +167,7 @@ export default function Home() {
     air,
     exotic,
   ]);
+
 
   useEffect(() => {
     getTraits();
