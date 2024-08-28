@@ -255,7 +255,7 @@ export default function SearchBar() {
             <div className="mt-2 text-end ">
               <button
                 onClick={(e) => {
-                  // e.preventDefault();
+                  e.preventDefault();
                   setBase(defaultValue);
                   setPad1(defaultValue);
                   setPad2(defaultValue);
