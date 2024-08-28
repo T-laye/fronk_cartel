@@ -37,6 +37,7 @@ export default function SearchBar() {
   const setWater1 = useSearchStore((state) => state.setWater1);
   const setWater2 = useSearchStore((state) => state.setWater2);
   const setAir = useSearchStore((state) => state.setAir);
+  const setExotic = useSearchStore((state) => state.setExotic);
 
   // console.log(head, mouth, body, eye);
 
@@ -66,6 +67,10 @@ export default function SearchBar() {
   };
   const handleSelectChangeAir = (e) => {
     setAir(e.target.value);
+    showFilter();
+  };
+  const handleSelectChangeExotic = (e) => {
+    setExotic(e.target.value);
     showFilter();
   };
 
@@ -128,6 +133,15 @@ export default function SearchBar() {
     const getAir = traits.find((t) => t.name === "Air");
 
     return getAir?.traits?.map((v) => (
+      <option key={v} value={v}>
+        {v}
+      </option>
+    ));
+  };
+  const renderExotic = () => {
+    const getExotic = traits.find((t) => t.name === "Exotic");
+
+    return getExotic?.traits?.map((v) => (
       <option key={v} value={v}>
         {v}
       </option>
@@ -231,6 +245,13 @@ export default function SearchBar() {
                 {renderAir()}
               </select>
             </div>
+            <div>
+              <label htmlFor="exotic">Exotic</label>
+              <select onChange={handleSelectChangeAir}>
+                <option value={defaultValue}>{defaultValue}</option>
+                {renderExotic()}
+              </select>
+            </div>
             <div className="mt-2 text-end ">
               <button
                 onClick={(e) => {
@@ -242,6 +263,7 @@ export default function SearchBar() {
                   setWater1(defaultValue);
                   setWater2(defaultValue);
                   setAir(defaultValue);
+                  setExotic(defaultValue);
                   setFilter(!filter);
                 }}
                 className="border-2 border-primary hover:bg-primary hover:text-white duration-300 px-2 rounded-md"

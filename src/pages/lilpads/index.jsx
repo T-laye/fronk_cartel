@@ -76,6 +76,7 @@ export default function Home() {
   const water1 = useSearchStore((state) => state.water1);
   const water2 = useSearchStore((state) => state.water2);
   const air = useSearchStore((state) => state.air);
+  const exotic = useSearchStore((state) => state.exotic);
   const itemsPerPage = 100;
   const scrollContainerRef = useRef(null);
 
@@ -177,7 +178,7 @@ export default function Home() {
     // Check if the name includes the search term or if searchTerm is empty
     const nameMatch =
       searchTerm === "" ||
-      d.name.toLowerCase().includes(`#${searchTerm.toLowerCase()}`);
+      d.name.toLowerCase().includes(`${searchTerm.toLowerCase()}`);
 
     // Check if each attribute matches the filter or is set to the default value
     const baseMatch = base === defaultValue || d.attributes.Base === base;
@@ -189,6 +190,8 @@ export default function Home() {
     const water2Match =
       water2 === defaultValue || d.attributes["Water 2"] === water2;
     const airMatch = air === defaultValue || d.attributes.Air === air;
+    const exoticMatch =
+      exotic === defaultValue || d.attributes.Exotic === exotic;
 
     // Return true if all conditions are met
     return (
@@ -199,7 +202,8 @@ export default function Home() {
       pad3Match &&
       water1Match &&
       water2Match &&
-      airMatch
+      airMatch &&
+      exoticMatch
     );
   });
 

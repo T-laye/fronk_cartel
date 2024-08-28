@@ -10,6 +10,7 @@ export const useSearchStore = create((set) => ({
   water1: "Select a value",
   water2: "Select a value",
   air: "Select a value",
+  exotic: "Select a value",
   updateTerm: (newTerm) => set({ term: newTerm }),
   setBase: (base) => set({ base }),
   setPad1: (pad1) => set({ pad1 }),
@@ -18,6 +19,7 @@ export const useSearchStore = create((set) => ({
   setWater1: (water1) => set({ water1 }),
   setWater2: (water2) => set({ water2 }),
   setAir: (air) => set({ air }),
+  setExotic: (exotic) => set({ exotic }),
   sortByRarity: false,
   toggleSortByRarity: () =>
     set((state) => ({ sortByRarity: !state.sortByRarity })),
