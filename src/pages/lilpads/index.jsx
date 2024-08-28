@@ -149,8 +149,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetchData();
-    // fetchSortedData();
+    // fetchData();
+    fetchSortedData();
     // fetchUpdatedData();
   }, [
     fetchData,
