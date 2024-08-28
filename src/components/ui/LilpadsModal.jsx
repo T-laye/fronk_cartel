@@ -12,7 +12,7 @@ export default function Modal({ info, img }) {
   const [copied, setCopied] = useState(false);
   const data = useFetchDataStore((state) => state.data);
   const fetchData = useFetchDataStore((state) => state.fetchData);
-
+  const updatedData = useFetchDataStore((state) => state.updatedData);
   function replaceSpacesAndNumbers(str) {
     return str?.replace("%20%$1", " ").replace("%20", " ");
   }
@@ -20,8 +20,12 @@ export default function Modal({ info, img }) {
   const originalString = info?.name;
   const updatedString = replaceSpacesAndNumbers(originalString);
 
+  const getInscriptionId = updatedData.find((d) => d.name === info.name);
+
+  console.log(getInscriptionId);
+
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(info.inscriptionId);
+    navigator.clipboard.writeText(getInscriptionId.inscriptionId);
     setCopied(true);
 
     // Reset the "Copied!" message after a brief delay
@@ -81,7 +85,7 @@ export default function Modal({ info, img }) {
   const totalItems = data.length;
   const traitRarity = calculateRarity(traitCount, totalItems);
 
-//   console.log(traitRarity);
+  //   console.log(traitRarity);
 
   // Calculate the total sum of rarity percentages for this NFT's traits
   const totalRaritySum = nft.attributes
@@ -99,7 +103,7 @@ export default function Modal({ info, img }) {
       }, 0)
     : 0;
 
-//   console.log(totalRaritySum);
+  //   console.log(totalRaritySum);
 
   return (
     <div className="fixed z-50 top-0 left-0 right-0 bottom-0 bg-[#00000090] backdrop-blur-sm min-h-screen flex p-4 items-center justify-center ">
@@ -120,8 +124,8 @@ export default function Modal({ info, img }) {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="text-center">
-            {/* <button onClick={handleCopyClick} className=" ">
+          <div className="text-center text-black">
+            <button onClick={handleCopyClick} className=" ">
               {copied ? (
                 "Copied Inscription ID!"
               ) : (
@@ -130,15 +134,18 @@ export default function Modal({ info, img }) {
                   <MdOutlineContentCopy size={20} /> <span>copy Id</span>
                 </div>
               )}
-            </button> */}
-            {/* <marquee className="whitespace-wrap">
-              Inscription ID: {info.inscriptionId}
-            </marquee> */}
+            </button>
+            <div className="whitespace-wrap text-wrap">
+              Inscription ID: <br />
+              <span className="break-all">
+                {getInscriptionId.inscriptionId}
+              </span>
+            </div>
             {/* <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee> */}
           </div>
         </div>
 
-        <div className="bg-primary mt-5 rounded-lg pt-1 pb-1 px-3 text-white">
+        <div className="bg-lilpadsPrimary mt-5 rounded-lg pt-1 pb-1 px-3 text-white">
           <h3 className="text-lg text-center mt-2 ">Attributes</h3>
           <div>
             <div className="flex justify-between text-lg mb-1">
@@ -173,14 +180,14 @@ export default function Modal({ info, img }) {
           </div>
         </div>
         {/* https://doggy.market/inscription/inscription id */}
-        {/* <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8">
           <Link
-            href={`https://doggy.market/inscription/${info.inscriptionId}`}
+            href={`https://doggy.market/inscription/${getInscriptionId.inscriptionId}`}
             target="_blank"
           >
-            <button className="btn text-primary">View on Doggy</button>
+            <button className="btn text-lilpadsPrimary">View on Doggy</button>
           </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );

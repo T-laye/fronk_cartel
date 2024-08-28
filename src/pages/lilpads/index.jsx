@@ -64,8 +64,10 @@ export default function Home() {
   const sort = useSearchStore((state) => state.sortByRarity);
   const data = useFetchDataStore((state) => state.data);
   const sortedData = useFetchDataStore((state) => state.sortedData);
+  
   const fetchData = useFetchDataStore((state) => state.fetchData);
   const fetchSortedData = useFetchDataStore((state) => state.fetchSortedData);
+  const fetchUpdatedData = useFetchDataStore((state) => state.fetchUpdatedData);
   const [currentPage, setCurrentPage] = useState(1);
   // const [sortedData, setSortedData] = useState([]);
   const itemsPerPage = 100;
@@ -74,9 +76,10 @@ export default function Home() {
   useEffect(() => {
     fetchData();
     fetchSortedData();
-  }, [fetchData, fetchSortedData, sort]);
+    fetchUpdatedData();
+  }, [fetchData, fetchSortedData, sort, fetchUpdatedData]);
 
-  // console.log(data);
+//   console.log(updatedData);
 
   // useEffect(() => {
   //   const traitCount = calculateTraitFrequency(data);

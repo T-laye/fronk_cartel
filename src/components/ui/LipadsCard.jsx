@@ -103,7 +103,7 @@ export default function LipadsCard({ data, index }) {
         <>
           <div
             onClick={show}
-            className="cursor-pointer text-3xl fixed z-[100] right-5 top-5 text-white"
+            className="cursor-pointer text-3xl fixed z-[100] right-5 top-5 text-gray-600 md:text-white"
           >
             X
           </div>

@@ -1,5 +1,203 @@
 [
   {
+    "inscriptionId": "Breaking News.png",
+    "name": "Breaking News",
+    "attributes": {
+      "Exotic": "Breaking News"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Cloud Nine.png",
+    "name": "Cloud Nine",
+    "attributes": {
+      "Exotic": "Cloud Nine"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Demon Gate.png",
+    "name": "Demon Gate",
+    "attributes": {
+      "Exotic": "Demon Gate"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Doge City.png",
+    "name": "Doge City",
+    "attributes": {
+      "Exotic": "Doge City"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Emerald City.png",
+    "name": "Emerald City",
+    "attributes": {
+      "Exotic": "Emerald City"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Fronk Fallout.png",
+    "name": "Fronk Fallout",
+    "attributes": {
+      "Exotic": "Fronk Fallout"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Holy Kaaba.png",
+    "name": "Holy Kaaba",
+    "attributes": {
+      "Exotic": "Holy Kaaba"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Life Tree.png",
+    "name": "Life Tree",
+    "attributes": {
+      "Exotic": "Life Tree"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Lizard Slayer.png",
+    "name": "Lizard Slayer",
+    "attributes": {
+      "Exotic": "Lizard Slayer"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Lunar Leap Station.png",
+    "name": "Lunar Leap Station",
+    "attributes": {
+      "Exotic": "Lunar Leap Station"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Molten Peak.png",
+    "name": "Molten Peak",
+    "attributes": {
+      "Exotic": "Molten Peak"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Mount Fronkmore.png",
+    "name": "Mount Fronkmore",
+    "attributes": {
+      "Exotic": "Mount Fronkmore"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Neon Nexus.png",
+    "name": "Neon Nexus",
+    "attributes": {
+      "Exotic": "Neon Nexus"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Olympus.png",
+    "name": "Olympus",
+    "attributes": {
+      "Exotic": "Olympus"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Private Island.png",
+    "name": "Private Island",
+    "attributes": {
+      "Exotic": "Private Island"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Dragon Hoard.png",
+    "name": "Dragon Hoard",
+    "attributes": {
+      "Exotic": "Dragon Hoard"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Green March.png",
+    "name": "Green March",
+    "attributes": {
+      "Exotic": "Green March"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Seed Vault.png",
+    "name": "Seed Vault",
+    "attributes": {
+      "Exotic": "Seed Vault"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Serene Pool.png",
+    "name": "Serene Pool",
+    "attributes": {
+      "Exotic": "Serene Pool"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Space X.png",
+    "name": "Space X",
+    "attributes": {
+      "Exotic": "Space X"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "The Ark.png",
+    "name": "The Ark",
+    "attributes": {
+      "Exotic": "The Ark"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
+    "inscriptionId": "Golden Temple.png",
+    "name": "Golden Temple",
+    "attributes": {
+      "Exotic": "Golden Temple"
+    },
+    "totalRarity": 0.01,
+    "rank": "Exotic"
+  },
+  {
     "inscriptionId": "Lilpad 3379.png",
     "name": "Lilpad 3379",
     "attributes": {
@@ -159646,203 +159844,5 @@
     },
     "totalRarity": 162.81,
     "rank": 9978
-  },
-  {
-    "inscriptionId": "Breaking News.png",
-    "name": "Breaking News",
-    "attributes": {
-      "Exotic": "Breaking News"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Cloud Nine.png",
-    "name": "Cloud Nine",
-    "attributes": {
-      "Exotic": "Cloud Nine"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Demon Gate.png",
-    "name": "Demon Gate",
-    "attributes": {
-      "Exotic": "Demon Gate"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Doge City.png",
-    "name": "Doge City",
-    "attributes": {
-      "Exotic": "Doge City"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Emerald City.png",
-    "name": "Emerald City",
-    "attributes": {
-      "Exotic": "Emerald City"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Fronk Fallout.png",
-    "name": "Fronk Fallout",
-    "attributes": {
-      "Exotic": "Fronk Fallout"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Holy Kaaba.png",
-    "name": "Holy Kaaba",
-    "attributes": {
-      "Exotic": "Holy Kaaba"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Life Tree.png",
-    "name": "Life Tree",
-    "attributes": {
-      "Exotic": "Life Tree"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Lizard Slayer.png",
-    "name": "Lizard Slayer",
-    "attributes": {
-      "Exotic": "Lizard Slayer"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Lunar Leap Station.png",
-    "name": "Lunar Leap Station",
-    "attributes": {
-      "Exotic": "Lunar Leap Station"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Molten Peak.png",
-    "name": "Molten Peak",
-    "attributes": {
-      "Exotic": "Molten Peak"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Mount Fronkmore.png",
-    "name": "Mount Fronkmore",
-    "attributes": {
-      "Exotic": "Mount Fronkmore"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Neon Nexus.png",
-    "name": "Neon Nexus",
-    "attributes": {
-      "Exotic": "Neon Nexus"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Olympus.png",
-    "name": "Olympus",
-    "attributes": {
-      "Exotic": "Olympus"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Private Island.png",
-    "name": "Private Island",
-    "attributes": {
-      "Exotic": "Private Island"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Dragon Hoard.png",
-    "name": "Dragon Hoard",
-    "attributes": {
-      "Exotic": "Dragon Hoard"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Green March.png",
-    "name": "Green March",
-    "attributes": {
-      "Exotic": "Green March"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Seed Vault.png",
-    "name": "Seed Vault",
-    "attributes": {
-      "Exotic": "Seed Vault"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Serene Pool.png",
-    "name": "Serene Pool",
-    "attributes": {
-      "Exotic": "Serene Pool"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Space X.png",
-    "name": "Space X",
-    "attributes": {
-      "Exotic": "Space X"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "The Ark.png",
-    "name": "The Ark",
-    "attributes": {
-      "Exotic": "The Ark"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
-  },
-  {
-    "inscriptionId": "Golden Temple.png",
-    "name": "Golden Temple",
-    "attributes": {
-      "Exotic": "Golden Temple"
-    },
-    "totalRarity": 0.01,
-    "rank": "Exotic"
   }
 ]
