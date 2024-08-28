@@ -179,7 +179,7 @@ export default function SearchBar() {
         className={`${
           filter
             ? "translate-y-0  md:translate-x-0"
-            : "-translate-y-full md:translate-y-0 md:translate-x-full"
+            : "-translate-y-[200%] md:translate-y-0 md:translate-x-full"
         } duration-300 h-screen bg-[#44444450] backdrop-blur-sm fixed z-40 top-0 bottom-0 right-0 md:w-[50vw] w-[100vw]`}
       >
         <div className="bg-white text-primary py-10 relative">
