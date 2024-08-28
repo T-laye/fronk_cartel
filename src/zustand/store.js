@@ -31,14 +31,14 @@ export const useFetchDataStore = create((set) => ({
   rankedData: [],
   updatedData: [],
   traits: [],
-  fetchData: async () => {
-    try {
-      const res = await axios.get("/data/finaljson.json");
-      set((state) => ({ data: res.data }));
-    } catch (e) {
-      console.log(e);
-    }
-  },
+  // fetchData: async () => {
+  //   try {
+  //     const res = await axios.get("/data/finaljson.json");
+  //     set((state) => ({ data: res.data }));
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // },
   fetchSortedData: async () => {
     try {
       const res = await axios.get("/data/sortedData.json");
@@ -55,6 +55,7 @@ export const useFetchDataStore = create((set) => ({
       console.log(e);
     }
   },
+  setRealData: (d) => set({ data: d }),
   setData: (newData) => set({ sortedData: newData }),
   setRankData: (rankedData) => set({ rankedData }),
   setTraits: (traits) => set({ traits }),

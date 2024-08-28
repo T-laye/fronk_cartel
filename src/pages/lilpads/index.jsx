@@ -4,6 +4,7 @@ import SearchBar from "@/components/ui/SearchBar";
 // import SearchBar from "@/components/ui/SearchBar";
 import Layout from "@/Layout";
 import { useFetchDataStore, useSearchStore } from "@/zustand/store";
+import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 
 // Function to calculate trait frequency
@@ -64,7 +65,8 @@ export default function Home() {
   const sort = useSearchStore((state) => state.sortByRarity);
   const data = useFetchDataStore((state) => state.data);
   const sortedData = useFetchDataStore((state) => state.sortedData);
-  const fetchData = useFetchDataStore((state) => state.fetchData);
+  //   const fetchData = useFetchDataStore((state) => state.fetchData);
+  const setRealData = useFetchDataStore((state) => state.setRealData);
   const fetchSortedData = useFetchDataStore((state) => state.fetchSortedData);
   const fetchUpdatedData = useFetchDataStore((state) => state.fetchUpdatedData);
   const setTraits = useFetchDataStore((state) => state.setTraits);
@@ -148,15 +150,25 @@ export default function Home() {
     );
   });
 
-//   async function fetchData() {
-    
-//   }
+  //   async function fetchData() {
+
+  //   }
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("/data/finaljson.json");
+      setRealData(res.data);
+      // set((state) => ({ data: res.data }));
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   useEffect(() => {
     fetchData();
-    fetchSortedData();
-    fetchUpdatedData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // fetchSortedData();
+    // fetchUpdatedData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     // fetchData,
     // fetchSortedData,
