@@ -7,57 +7,57 @@ import { useFetchDataStore, useSearchStore } from "@/zustand/store";
 import { useEffect, useState, useRef } from "react";
 
 // Function to calculate trait frequency
-const calculateTraitFrequency = (data) => {
-  const traitCount = {};
+// const calculateTraitFrequency = (data) => {
+//   const traitCount = {};
 
-  data.forEach((item) => {
-    for (const [key, value] of Object.entries(item.attributes)) {
-      if (key === "Background") {
-        continue;
-      }
+//   data.forEach((item) => {
+//     for (const [key, value] of Object.entries(item.attributes)) {
+//       if (key === "Background") {
+//         continue;
+//       }
 
-      if (!traitCount[key]) {
-        traitCount[key] = {};
-      }
-      if (!traitCount[key][value]) {
-        traitCount[key][value] = 0;
-      }
-      traitCount[key][value] += 1;
-    }
-  });
+//       if (!traitCount[key]) {
+//         traitCount[key] = {};
+//       }
+//       if (!traitCount[key][value]) {
+//         traitCount[key][value] = 0;
+//       }
+//       traitCount[key][value] += 1;
+//     }
+//   });
 
-  return traitCount;
-};
+//   return traitCount;
+// };
 
-// Function to calculate rarity percentage
-const calculateRarity = (traitCount, totalItems) => {
-  const traitRarity = {};
+// // Function to calculate rarity percentage
+// const calculateRarity = (traitCount, totalItems) => {
+//   const traitRarity = {};
 
-  for (const [trait, values] of Object.entries(traitCount)) {
-    traitRarity[trait] = {};
-    for (const [value, count] of Object.entries(values)) {
-      traitRarity[trait][value] = ((count / totalItems) * 100).toFixed(2);
-    }
-  }
+//   for (const [trait, values] of Object.entries(traitCount)) {
+//     traitRarity[trait] = {};
+//     for (const [value, count] of Object.entries(values)) {
+//       traitRarity[trait][value] = ((count / totalItems) * 100).toFixed(2);
+//     }
+//   }
 
-  return traitRarity;
-};
+//   return traitRarity;
+// };
 
-// Function to calculate total rarity of an item
-const calculateTotalRarity = (item, traitRarity) => {
-  let totalRarity = 0;
+// // Function to calculate total rarity of an item
+// const calculateTotalRarity = (item, traitRarity) => {
+//   let totalRarity = 0;
 
-  for (const [key, value] of Object.entries(item.attributes)) {
-    if (key !== "Background") {
-      totalRarity +=
-        traitRarity[key] && traitRarity[key][value]
-          ? parseFloat(traitRarity[key][value])
-          : 0;
-    }
-  }
+//   for (const [key, value] of Object.entries(item.attributes)) {
+//     if (key !== "Background") {
+//       totalRarity +=
+//         traitRarity[key] && traitRarity[key][value]
+//           ? parseFloat(traitRarity[key][value])
+//           : 0;
+//     }
+//   }
 
-  return totalRarity;
-};
+//   return totalRarity;
+// };
 
 export default function Home() {
   const searchTerm = useSearchStore((state) => state.term);
