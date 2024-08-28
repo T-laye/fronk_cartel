@@ -87,11 +87,11 @@ export default function Home() {
     const attributeMap = {};
 
     // Iterate through each item in the data
-    data.forEach((item) => {
-      const attributes = item.attributes;
+    data?.forEach((item) => {
+      const attributes = item?.attributes;
 
       // Iterate through each attribute of the item
-      for (const [key, value] of Object.entries(attributes)) {
+      for (const [key, value] of Object?.entries(attributes)) {
         if (!attributeMap[key]) {
           // If the attribute is not yet in the map, initialize it with an empty set
           attributeMap[key] = new Set();
@@ -102,7 +102,7 @@ export default function Home() {
     });
 
     // Convert the attribute map to the desired format
-    const attributesArray = Object.entries(attributeMap).map(
+    const attributesArray = Object?.entries(attributeMap).map(
       ([key, valueSet]) => ({
         name: key,
         traits: Array.from(valueSet), // Convert the set back to an array
@@ -164,7 +164,8 @@ export default function Home() {
     pad3,
     water1,
     water2,
-    air, exotic
+    air,
+    exotic,
   ]);
 
   useEffect(() => {
