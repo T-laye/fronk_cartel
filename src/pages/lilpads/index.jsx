@@ -150,13 +150,13 @@ export default function Home() {
 
   useEffect(() => {
     // fetchData();
-    fetchSortedData();
+    // fetchSortedData();
     // fetchUpdatedData();
   }, [
-    fetchData,
-    fetchSortedData,
+    // fetchData,
+    // fetchSortedData,
+    // fetchUpdatedData,
     sort,
-    fetchUpdatedData,
     getTraits,
     base,
     pad1,
@@ -167,7 +167,6 @@ export default function Home() {
     air,
     exotic,
   ]);
-
 
   useEffect(() => {
     getTraits();
