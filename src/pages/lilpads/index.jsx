@@ -148,6 +148,10 @@ export default function Home() {
     );
   });
 
+//   async function fetchData() {
+    
+//   }
+
   useEffect(() => {
     fetchData();
     fetchSortedData();
