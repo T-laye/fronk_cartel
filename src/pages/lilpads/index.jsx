@@ -112,11 +112,60 @@ export default function Home() {
     setTraits(attributesArray);
   };
 
+  const defaultValue = "Select a value";
+  const actualData = !sort ? sortedData : data;
+
+  const filteredData = actualData?.filter((d) => {
+    // Check if the name includes the search term or if searchTerm is empty
+    const nameMatch =
+      searchTerm === "" ||
+      d.name.toLowerCase().includes(`${searchTerm.toLowerCase()}`);
+
+    // Check if each attribute matches the filter or is set to the default value
+    const baseMatch = base === defaultValue || d.attributes.Base === base;
+    const pad1Match = pad1 === defaultValue || d.attributes["Pad 1"] === pad1;
+    const pad2Match = pad2 === defaultValue || d.attributes["Pad 2"] === pad2;
+    const pad3Match = pad3 === defaultValue || d.attributes["Pad 3"] === pad3;
+    const water1Match =
+      water1 === defaultValue || d.attributes["Water 1"] === water1;
+    const water2Match =
+      water2 === defaultValue || d.attributes["Water 2"] === water2;
+    const airMatch = air === defaultValue || d.attributes.Air === air;
+    const exoticMatch =
+      exotic === defaultValue || d.attributes.Exotic === exotic;
+
+    // Return true if all conditions are met
+    return (
+      nameMatch &&
+      baseMatch &&
+      pad1Match &&
+      pad2Match &&
+      pad3Match &&
+      water1Match &&
+      water2Match &&
+      airMatch &&
+      exoticMatch
+    );
+  });
+
   useEffect(() => {
     fetchData();
     fetchSortedData();
     fetchUpdatedData();
-  }, [fetchData, fetchSortedData, sort, fetchUpdatedData, getTraits]);
+  }, [
+    fetchData,
+    fetchSortedData,
+    sort,
+    fetchUpdatedData,
+    getTraits,
+    base,
+    pad1,
+    pad2,
+    pad3,
+    water1,
+    water2,
+    air, exotic
+  ]);
 
   useEffect(() => {
     getTraits();
@@ -174,44 +223,8 @@ export default function Home() {
     window.scrollTo({ top: 0 });
   }, [currentPage]);
 
-  const defaultValue = "Select a value";
-  const actualData = !sort ? sortedData : data;
+  //   console.log(exotic);
 
-  const filteredData = actualData?.filter((d) => {
-    // Check if the name includes the search term or if searchTerm is empty
-    const nameMatch =
-      searchTerm === "" ||
-      d.name.toLowerCase().includes(`${searchTerm.toLowerCase()}`);
-
-    // Check if each attribute matches the filter or is set to the default value
-    const baseMatch = base === defaultValue || d.attributes.Base === base;
-    const pad1Match = pad1 === defaultValue || d.attributes["Pad 1"] === pad1;
-    const pad2Match = pad2 === defaultValue || d.attributes["Pad 2"] === pad2;
-    const pad3Match = pad3 === defaultValue || d.attributes["Pad 3"] === pad3;
-    const water1Match =
-      water1 === defaultValue || d.attributes["Water 1"] === water1;
-    const water2Match =
-      water2 === defaultValue || d.attributes["Water 2"] === water2;
-    const airMatch = air === defaultValue || d.attributes.Air === air;
-    const exoticMatch =
-      exotic === defaultValue || d.attributes.Exotic === exotic;
-
-    // Return true if all conditions are met
-    return (
-      nameMatch &&
-      baseMatch &&
-      pad1Match &&
-      pad2Match &&
-      pad3Match &&
-      water1Match &&
-      water2Match &&
-      airMatch &&
-      exoticMatch
-    );
-  });
-
-//   console.log(exotic);
-  
   const renderData = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
