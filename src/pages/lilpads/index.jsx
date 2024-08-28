@@ -149,9 +149,10 @@ export default function Home() {
   });
 
   useEffect(() => {
-    // fetchData();
-    // fetchSortedData();
-    // fetchUpdatedData();
+    fetchData();
+    fetchSortedData();
+    fetchUpdatedData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     // fetchData,
     // fetchSortedData,
