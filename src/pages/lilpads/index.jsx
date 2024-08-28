@@ -80,7 +80,7 @@ export default function Home() {
   const itemsPerPage = 100;
   const scrollContainerRef = useRef(null);
 
-  //   console.log(base);
+  //   console.log();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getTraits = () => {
@@ -116,8 +116,11 @@ export default function Home() {
     fetchData();
     fetchSortedData();
     fetchUpdatedData();
-    getTraits();
   }, [fetchData, fetchSortedData, sort, fetchUpdatedData, getTraits]);
+
+  useEffect(() => {
+    getTraits();
+  }, [data, getTraits]);
 
   //   console.log(updatedData);
 
@@ -207,6 +210,8 @@ export default function Home() {
     );
   });
 
+//   console.log(exotic);
+  
   const renderData = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;

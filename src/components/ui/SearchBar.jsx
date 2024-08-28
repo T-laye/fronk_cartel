@@ -247,7 +247,7 @@ export default function SearchBar() {
             </div>
             <div>
               <label htmlFor="exotic">Exotic</label>
-              <select onChange={handleSelectChangeAir}>
+              <select onChange={handleSelectChangeExotic}>
                 <option value={defaultValue}>{defaultValue}</option>
                 {renderExotic()}
               </select>
