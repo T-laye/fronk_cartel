@@ -143,7 +143,7 @@ export default function Header() {
               <li>
                 <Link href="/devs">.devs</Link>
               </li>
-              <li>
+              {/*   <li>
                 <Link href="/d9monz">d9monz</Link>
               </li>
               <li>
@@ -151,7 +151,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/eggclipse">Eggclipse</Link>
-              </li>
+              </li>*/}
               <li>
                 <Link href="/lilpads">Lilpads</Link>
               </li>
@@ -193,7 +193,7 @@ export default function Header() {
               <li>
                 <Link href="/devs">.devs</Link>
               </li>
-              <li>
+              {/*<li>
                 <Link href="/d9monz">d9monz</Link>
               </li>
               <li>
@@ -201,7 +201,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/eggclipse">Eggclipse</Link>
-              </li>
+              </li>*/}
               <li>
                 <Link href="/lilpads">Lilpads</Link>
               </li>

@@ -12,7 +12,6 @@ export default function DemonCards({ info }) {
   const [copied, setCopied] = useState(false);
   const cardRef = useRef(null);
   // const [digit, setDigit] = useState("");
-
   // function replaceSpacesAndHash(inputString) {
   //   return inputString.replace(/ /g, "%20").replace(/#/g, "_");
   // }
